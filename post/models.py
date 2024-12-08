@@ -24,3 +24,10 @@ class Post(models.Model):
     def __str__(self):
         return f"{self.category}: {self.title} created at {self.created_at} {self.slug}"
 
+
+class Users(models.Model):
+    username = models.CharField(max_length=50)
+    email = models.EmailField(max_length=254)
+    comment = models.TextField(default='')
+
+
